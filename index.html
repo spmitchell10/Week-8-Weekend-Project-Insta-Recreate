@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/32cc6c2324.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -19,7 +19,7 @@
                 <div class="row topRow">
                     <div class="col-md-3 middle leftHeader">
                         <div class="fa fa-instagram" aria-hidden="true"></div>
-                        <h2 class="smalltext" style="font-family: 'Oleo Script', cursive;">Instagram</h2>
+                        <h2 class="smalltext" style="font-family: 'Rochester', cursive;"><b>Instagram</b></h2>
                     </div>
                     <div class="col-md-6 middleHeader">
                         <input type="text" class="form-control subscribe-input" name="email" placeholder="Search" tabindex="500">
@@ -66,14 +66,17 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3" ng-repeat="image in vm.images">
                     <div class="instaPosts">
-                        <div>
-                            <h3>{{image.title}}</h3>
+                        <div class="title">
+                            <img src="pics/headshot.jpg">
+                            <h4><b>spmitchell_</b></h4>
                         </div>
                         <div>
                             <img src="{{image.url}}">
                         </div>
-                        <div>
-                            <p>{{image.description}}</p>
+                        <div class="description">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p><b>spmitchell_</b> {{image.description}}</p>
                         </div>
                         </div>
                     </div>

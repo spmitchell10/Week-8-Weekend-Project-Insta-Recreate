@@ -1,7 +1,7 @@
 .leftHeader {
   margin: 0px auto;
   display: block;
-  padding-left: 65px;
+  padding-left: 90px;
   padding-top: 5px; }
   .leftHeader .fa-instagram {
     display: inline-block;
@@ -14,6 +14,26 @@
 
 .top {
   border: .5px solid #E6E6E6; }
+
+.description {
+  padding-top: 8px;
+  padding-left: 15px; }
+  .description i {
+    font-size: 25px;
+    padding-right: 10px; }
+
+.title {
+  padding-left: 15px;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 3px; }
+  .title img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: inline-block; }
+  .title h4 {
+    display: inline-block; }
 
 .topRow {
   padding-bottom: 12px; }
