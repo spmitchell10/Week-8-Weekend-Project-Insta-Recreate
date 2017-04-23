@@ -1,0 +1,92 @@
+<!doctype html>
+<html ng-app='instagram'>
+
+<head>
+    <title>Shopular</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/32cc6c2324.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section ng-controller='TableController as vm'>
+        <!-- Top Bar -->
+        <div class="container-fluid top">
+            <div class="container">
+                <div class="row topRow">
+                    <div class="col-md-3 middle leftHeader">
+                        <div class="fa fa-instagram" aria-hidden="true"></div>
+                        <h2 class="smalltext" style="font-family: 'Oleo Script', cursive;">Instagram</h2>
+                    </div>
+                    <div class="col-md-6 middleHeader">
+                        <input type="text" class="form-control subscribe-input" name="email" placeholder="Search" tabindex="500">
+                    </div>
+                    <div class="col-md-3 rightHeader">
+                        <button type="button" data-toggle="modal" data-target="#myModal" class="addPic"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        <i class="fa fa-compass" aria-hidden="true"></i>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add a Photo!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="vm.addImage(userForm.$valid)" novalidate name='userForm'>
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type='text' class="form-control" placeholder="Title" ng-model='vm.image.title' required>
+                            <label for="exampleInputEmail1">Description</label>
+                            <input type='text' class="form-control" placeholder="Description" ng-model='vm.image.description' required>
+                            <label for="exampleInputEmail1">Pic</label>
+                            <input type="text" name="likejs" ng-model="vm.image.url" placeholder="Pic URL" class="form-control" required>
+                            <div class="footer">
+                                <button class="btn btn-primary submit" type="submit">
+                                    Submit
+                                </button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Body -->
+        <div class="container-fluid mainBody">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" ng-repeat="image in vm.images">
+                    <div class="instaPosts">
+                        <div>
+                            <h3>{{image.title}}</h3>
+                        </div>
+                        <div>
+                            <img src="{{image.url}}">
+                        </div>
+                        <div>
+                            <p>{{image.description}}</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>
+    <script src='js/services/API.js'></script>
+    <script src='js/controllers/TableController.js'></script>
+</body>
+
+</html>
