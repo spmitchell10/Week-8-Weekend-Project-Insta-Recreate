@@ -1,0 +1,50 @@
+<div class="container-fluid mainBody">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" ng-repeat="image in vm.images">
+                <div class="instaPosts">
+                    <div class="title">
+                        <img src="pics/headshot.jpg">
+                        <h4><b>spmitchell_</b></h4>
+                    </div>
+                    <div>
+                        <img src="{{image.url}}">
+                    </div>
+                    <div class="description">
+                        <button class="fa fa-heart-o likeButton" aria-hidden="true"></button>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p><b>spmitchell_</b> {{image.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add a Photo!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="vm.addImage(userForm.$valid)" novalidate name='userForm'>
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type='text' class="form-control" placeholder="Title" ng-model='vm.image.title' required>
+                            <label for="exampleInputEmail1">Description</label>
+                            <input type='text' class="form-control" placeholder="Description" ng-model='vm.image.description' required>
+                            <label for="exampleInputEmail1">Pic</label>
+                            <input type="text" name="likejs" ng-model="vm.image.url" placeholder="Pic URL" class="form-control" required>
+                            <div class="footer">
+                                <button class="btn btn-primary submit" type="submit">
+                                    Submit
+                                </button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>

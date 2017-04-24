@@ -42,6 +42,7 @@ body{
 	display: block;
 	padding-bottom: 5px;
 	padding-top: 3px;
+	border-bottom: .5px solid #E6E6E6;
 	img{
 		height: 35px;
 		width: 35px;
@@ -101,6 +102,10 @@ img{
 	border: none;
 }
 
+.fa-user-o, .fa-instagram{
+	color: black;
+}
+
 .likeButton{
 	background: none;
 	border: none;
@@ -110,4 +115,15 @@ img{
 
 .footer{
 	margin-top: 10px;
+}
+
+// User Page
+
+.userPics{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	height: 300px;
+	img{
+		height: 100%;
+	}
 }

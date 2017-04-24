@@ -14,6 +14,8 @@
                 vm.images = res.data.images;
             })
 
+            // Post a picture 
+
             vm.addImage = ((isValid)=>{
                 
                 if(isValid){
@@ -23,11 +25,37 @@
                     let getNewImage = API.addImage(newImage);
                     getNewImage.then(res =>{
                         console.log(res);
-                        vm.images = res;
+                        let images = API.getImages();
+                            images.then(res=>{
+                                console.log(res);
+                                vm.images = res.data.images;
+            })
 
                     });
                     vm.image = {};
                 }
             })
+
+            // Get a single image
+
+            vm.singleImage = ((id)=>{
+                let getSingleImage = API.getSingleImage(id);
+                getSingleImage.then(res => {
+                    console.log(res);
+                    vm.currentImage = res.data;
+                    $('#myUserModal').modal('show')
+                    
+                })
+            })
+
+            // Like a picture
+
+            vm.likeImage = (item=>{
+                let image = API.likeImage(item._id);
+                image.then(res=>{
+                    item.likes = res.data.data.likes+1;
+                })
+            })
         })
 })();
+

@@ -23,6 +23,21 @@
                    })
 			   },
 
+			    getSingleImage:(id) => {
+                       return $http({
+                            method:"GET",
+                            url: `http://instagramcloneclass.herokuapp.com/images/${id}`,
+                            headers:{X_CSRF_TOKEN: 'stephen'},
+                       })
+                   },
+
+                likeImage:(data) => {
+                       return $http({
+                            method:"POST",
+                            url: "http://instagramcloneclass.herokuapp.com/images/vote",
+                            data: {imageid:data},
+                       })
+                   }
 			    
 		  	};
         });
