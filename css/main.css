@@ -1,3 +1,6 @@
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 .leftHeader {
   margin: 0px auto;
   display: block;
@@ -21,6 +24,8 @@
   .description i {
     font-size: 25px;
     padding-right: 10px; }
+  .description p {
+    padding-top: 10px; }
 
 .title {
   padding-left: 15px;
@@ -31,7 +36,8 @@
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 5px; }
   .title h4 {
     display: inline-block; }
 
@@ -73,6 +79,12 @@ img {
 .addPic {
   background: none;
   border: none; }
+
+.likeButton {
+  background: none;
+  border: none;
+  font-size: 25px;
+  padding-right: 10px; }
 
 .footer {
   margin-top: 10px; }
