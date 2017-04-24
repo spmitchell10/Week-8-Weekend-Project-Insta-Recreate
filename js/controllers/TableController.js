@@ -53,6 +53,7 @@
             vm.likeImage = (item=>{
                 let image = API.likeImage(item._id);
                 image.then(res=>{
+                    console.log(res);
                     item.likes = res.data.data.likes+1;
                 })
             })

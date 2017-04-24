@@ -11,7 +11,8 @@ body {
     font-size: 35px;
     border-right: grey solid 1px;
     padding-right: 15px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    text-decoration: none; }
   .leftHeader .smalltext {
     display: inline-block; }
 
@@ -26,6 +27,9 @@ body {
     padding-right: 10px; }
   .description p {
     padding-top: 10px; }
+  .description a {
+    color: black;
+    text-decoration: none; }
 
 .title {
   padding-left: 15px;
@@ -71,6 +75,8 @@ img {
   padding-top: 23px; }
   .rightHeader i {
     padding-right: 18px; }
+  .rightHeader a {
+    text-decoration: none; }
 
 .addImage {
   text-align: center;

@@ -31,13 +31,13 @@
                        })
                    },
 
-                likeImage:(data) => {
-                       return $http({
-                            method:"POST",
-                            url: "http://instagramcloneclass.herokuapp.com/images/vote",
-                            data: {imageid:data},
-                       })
-                   }
+          likeImage:(data) => {
+                 return $http({
+                      method:"POST",
+                      url: "http://instagramcloneclass.herokuapp.com/images/vote",
+                      data: {imageid:data},
+                 })
+             }
 			    
 		  	};
         });

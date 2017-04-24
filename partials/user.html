@@ -21,8 +21,9 @@
                     <h4><b>spmitchell_</b></h4>
                 </div>
                 <div class="description">
-                    <button class="fa fa-heart-o likeButton" aria-hidden="true"></button>
+                    <a class="fa fa-heart-o likeButton" ng-Click="vm.likeImage(vm.currentImage)" aria-hidden="true"></a>
                     <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <h5>{{vm.currentImage.likes}} likes</h5>
                     <p><b>spmitchell_</b> {{vm.currentImage.description}}</p>
                 </div>
             </div>
