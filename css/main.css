@@ -12,7 +12,8 @@ body {
     border-right: grey solid 1px;
     padding-right: 15px;
     margin-right: 10px;
-    text-decoration: none; }
+    text-decoration: none;
+    color: black; }
   .leftHeader .smalltext {
     display: inline-block; }
 
@@ -76,7 +77,8 @@ img {
   .rightHeader i {
     padding-right: 18px; }
   .rightHeader a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: black; }
 
 .addImage {
   text-align: center;
