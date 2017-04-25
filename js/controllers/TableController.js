@@ -8,6 +8,7 @@
         	const vm = this;
 
         	// Get pictures from DB
+
             let images = API.getImages();
             images.then(res=>{
                 console.log(res);
@@ -48,11 +49,21 @@
                 })
             })
 
-            // Like a picture
+            // Like a picture on Modal
 
             vm.likeImage = (item=>{
                 let image = API.likeImage(item._id);
                 image.then(res=>{
+                    console.log(res);
+                    item.likes = res.data.data.likes+1;
+                })
+            })
+
+            // Like a picutre on the Home Page
+
+            vm.likeImageHomePage = (item=>{
+                let imageMain = API.likeImage(item._id);
+                imageMain.then(res=>{
                     console.log(res);
                     item.likes = res.data.data.likes+1;
                 })

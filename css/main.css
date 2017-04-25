@@ -78,7 +78,8 @@ img {
     padding-right: 18px; }
   .rightHeader a {
     text-decoration: none;
-    color: black; }
+    color: black;
+    padding-right: 18px; }
 
 .addImage {
   text-align: center;

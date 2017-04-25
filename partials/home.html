@@ -11,9 +11,9 @@
                         <img src="{{image.url}}">
                     </div>
                     <div class="description">
-                        <a class="fa fa-heart-o likeButton" ng-Click="vm.likeImage(vm.currentImage)" aria-hidden="true"></a>
+                        <a class="fa fa-heart-o likeButton" ng-Click="vm.likeImageHomePage(image)" aria-hidden="true"></a>
                         <i class="fa fa-comment-o" aria-hidden="true"></i>
-                        <h5>{{vm.currentImage.likes}} likes</h5>
+                        <h5>{{image.likes}} likes</h5>
                         <p><b>spmitchell_</b> {{image.description}}</p>
                     </div>
                 </div>
@@ -22,6 +22,8 @@
     </div>
 </div>
 
+
+<!-- Modal to add new content -->
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
